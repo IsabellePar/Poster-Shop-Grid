@@ -1,13 +1,28 @@
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
     margin: 0;
-    overflow-x: hidden;
+    font-size: 0.8rem;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
 }
 
 p {
-    margin: 0;
+    margin: 0.1rem 0;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 header {
@@ -23,87 +38,99 @@ header {
 }
 
 .nav-icon {
-    width: 1rem;
+    width: 1.5rem;
     align-self: flex-start;
 }
 
 .header-img {
-    width: 150px;
+    width: 180px;
 }
 
-h1 {
-    font-size: 3.8rem;
-}
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 3rem 0;
+    padding: 3rem;
 }
 
 .collection {
-    max-width: 800px;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 2px solid green;
 }
 
 .card {
     width: 30%;
-    margin: 3% 1%;
-    border: 2px solid green;
+    aspect-ratio: 1 / 1.8;
+    margin: 5% 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 0.6rem;
 }
 
 .card img {
     width: 100%;
 }
 
+.card .card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card a {
+    background-color: rgb(219, 68, 83);
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 7px 15px;
+    margin-top: auto;
+    border-radius: 3px;
+    font-size: 0.7rem;
+}
+
 .featured {
-    max-width: 800px;
-    border: 2px solid green;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .card.large {
     width: 50%;
     background-color: white;
     color: black;
-}
-.card-text {
-    padding: 2rem 1rem 1rem 1rem;
+    aspect-ratio: 1 / 1.6;
 }
 
-.card a {
-    background-color: rgb(219, 68, 83);
-    color: white;
-    font-size: 0.5rem;
-    padding: 0.3rem;
-    width: fit-content;
-    border-radius: 3px;
+.card.large .card-text {
+    padding: 4%;
+}
+
+.card.large a {
+    padding: 15px 20px;
 }
 
 footer {
     background-color: rgb(53, 53, 53);
+    height: 180px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 12%
 }
 
 footer article {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .social-media {
