@@ -6,17 +6,34 @@ body {
     font-size: 0.8rem;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+}
+
+.container {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-size: 3.8rem;
 }
 
 h2 {
+    font-size: 2rem;
+    align-self: flex-start;
+}
+
+h3 {
     margin: 1rem 0;
     font-size: 1.5rem;
 }
 
 p {
-    margin: 0.1rem 0;
+    margin: 0.2rem 0;
     line-height: 1.5;
 }
 
@@ -32,7 +49,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 300px;
+    height: 350px;
     padding: 1rem;
     padding-bottom: 0;
 }
@@ -43,20 +60,10 @@ header {
 }
 
 .header-img {
-    width: 180px;
-}
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3rem;
+    width: 160px;
 }
 
 .collection {
-    max-width: 900px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -65,8 +72,7 @@ main {
 
 .card {
     width: 30%;
-    aspect-ratio: 1 / 1.8;
-    margin: 5% 1%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,8 +89,11 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
 }
+.card-text p {
+    margin-bottom: 10%;
+}
 
-.card a {
+.button {
     background-color: rgb(219, 68, 83);
     color: white;
     text-align: center;
@@ -96,25 +105,23 @@ main {
 }
 
 .featured {
-    max-width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2%;
 }
 
 .card.large {
     width: 50%;
     background-color: white;
     color: black;
-    aspect-ratio: 1 / 1.6;
 }
 
 .card.large .card-text {
     padding: 4%;
 }
-
-.card.large a {
-    padding: 15px 20px;
+.card.large .button, .checkout {
+    padding: 12px 20px;
 }
 
 footer {
@@ -125,7 +132,7 @@ footer {
     flex-direction: row;
     justify-content:center;
     align-items: flex-start;
-    gap: 12%
+    gap: 15%
 }
 
 footer article {
@@ -138,4 +145,30 @@ footer article {
     flex-direction: row;
     justify-content: space-between;
     gap: 0.5rem;
+}
+
+.cart-details {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 15%;
+}
+
+.cart-details small {
+    padding: 4px 0;
+    margin-bottom: 5px;
+    display: block;
+    background-color: rgba(165, 42, 42, 0.4);
+}
+
+.item { flex: 3; }
+.number { flex: 2; }
+.price { flex: 1; }
+
+.checkout {
+    font-size: 1.5rem;
+    align-self: flex-end;
 }
